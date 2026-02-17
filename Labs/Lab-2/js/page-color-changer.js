@@ -34,5 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	redSlider.addEventListener('change', updateBackgroundColor);
 	greenSlider.addEventListener('change', updateBackgroundColor);
 	blueSlider.addEventListener('change', updateBackgroundColor);
+    // works :)
 
 });
