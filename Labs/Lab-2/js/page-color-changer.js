@@ -14,4 +14,25 @@ document.addEventListener('DOMContentLoaded', function() {
 	const blueSlider = document.getElementById('blue');
 
 
+	// reads the current value of each slider and applies the combined
+	// RGB value as the background-color of the HTML element
+	// Mirrors the pattern from lesson-4 in the conditional js file
+	// Mirrors the rgb() strings from lesson-6/js/events.js: 'rgb(' + r + ',' + g + ',' + b + ')'
+	function updateBackgroundColor() {
+		// Read the numeric value from each slider using Number() — same as lesson-4
+		let red   = Number(redSlider.value);
+		let green = Number(greenSlider.value);
+		let blue  = Number(blueSlider.value);
+
+		// Build the rgb() colour string and apply it to the HTML element's background-color
+		page.style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+	}
+
+	// EVENT HANDLERS - listen for the 'change' event on each range slider
+	// From lesson-4 wind speed slider pattern
+	// Each handler calls updateBackgroundColor() so the page colour updates whenever a slider moves
+	redSlider.addEventListener('change', updateBackgroundColor);
+	greenSlider.addEventListener('change', updateBackgroundColor);
+	blueSlider.addEventListener('change', updateBackgroundColor);
+
 });
