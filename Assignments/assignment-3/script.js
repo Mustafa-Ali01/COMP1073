@@ -4,7 +4,7 @@ const addBtn = document.getElementById('addBtn');
 const taskList = document.getElementById('taskList');
 
 // Enforce a maximum character limit of 30
-taskInput.maxLength = 30;
+taskInput.maxLength = 50;
 
 // Listen for the Add button click
 addBtn.addEventListener('click', function() {
@@ -14,11 +14,24 @@ addBtn.addEventListener('click', function() {
         
         // Create the elements
         const li = document.createElement('li');
+        
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        
         const textNode = document.createTextNode(taskInput.value);
         
-        // Create the delete button
         const deleteBtn = document.createElement('button');
         deleteBtn.appendChild(document.createTextNode('Delete'));
+
+        // Checkbox logic: strike through and move to bottom
+        checkbox.addEventListener('change', function() {
+            if (checkbox.checked) {
+                li.style.textDecoration = 'line-through';
+                taskList.appendChild(li); 
+            } else {
+                li.style.textDecoration = 'none';
+            }
+        });
 
         // Delete button logic: remove the item
         deleteBtn.addEventListener('click', function() {
@@ -26,6 +39,7 @@ addBtn.addEventListener('click', function() {
         });
 
         // Assemble the list item
+        li.appendChild(checkbox);
         li.appendChild(textNode);
         li.appendChild(deleteBtn);
         
