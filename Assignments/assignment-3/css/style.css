@@ -1,0 +1,108 @@
+/* Basic reset and styling for a visually attractive layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    color: #333;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button#addBtn {
+    padding: 12px 20px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#addBtn:hover {
+    background-color: #2ecc71;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: #ecf0f1;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: all 0.4s ease; /* Enables smooth fading effects */
+}
+
+li span {
+    flex: 1;
+    margin-left: 12px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+/* Checked state styling requirements */
+li.completed span {
+    text-decoration: line-through;
+    color: #7f8c8d;
+}
+
+/* Take it further: Checked items fade to green */
+li.completed {
+    background-color: #d5f5e3;
+}
+
+/* Delete button styling */
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Take it further: Deleted items fade to red before vanishing */
+li.fade-out {
+    background-color: #fadbd8;
+    opacity: 0;
+    transform: translateX(20px);
+}
