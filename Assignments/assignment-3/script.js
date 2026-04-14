@@ -15,9 +15,19 @@ addBtn.addEventListener('click', function() {
         // Create the elements
         const li = document.createElement('li');
         const textNode = document.createTextNode(taskInput.value);
+        
+        // Create the delete button
+        const deleteBtn = document.createElement('button');
+        deleteBtn.appendChild(document.createTextNode('Delete'));
+
+        // Delete button logic: remove the item
+        deleteBtn.addEventListener('click', function() {
+            taskList.removeChild(li); 
+        });
 
         // Assemble the list item
         li.appendChild(textNode);
+        li.appendChild(deleteBtn);
         
         // Add to the page
         taskList.appendChild(li);
