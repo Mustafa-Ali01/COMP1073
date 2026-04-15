@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather API Demo</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!--The boostrapper's documentation is here https://getbootstrap.com/ learned this in comp1054 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <main>
+        <h1>Weather Connection Demo</h1>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter City Name">
+            <button id="fetchBtn">Get Data</button>
+        </div>
+
+        <div id="displayArea">
+            </div>
+
+        <footer>
+            <p>Documentation followed: <a href="https://openweathermap.org/current">OpenWeather API Docs</a></p>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
