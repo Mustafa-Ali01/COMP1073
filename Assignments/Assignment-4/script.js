@@ -5,11 +5,9 @@ fetchBtn.addEventListener('click', async function() {
     const city = document.getElementById('cityInput').value;
     const display = document.getElementById('displayArea');
 
-    // Get Coordinates
     const geoResponse = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`);
     const geoData = await geoResponse.json();
 
-    // Stop the function if the city is not found
     if (geoData.length === 0) {
         alert("Location not found");
         return; 
@@ -19,5 +17,9 @@ fetchBtn.addEventListener('click', async function() {
     const lon = geoData[0].lon;
     const name = geoData[0].name;
 
-    alert("Coordinates found:", lat, lon);
+    // 2. Get Weather
+    const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
+    const weatherData = await weatherResponse.json();
+
+    console.log("Weather data received:", weatherData);
 });
