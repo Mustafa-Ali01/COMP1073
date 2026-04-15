@@ -52,3 +52,22 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Display Area & Weather Card */
+#displayArea {
+    min-height: 150px; /* Keeps the page from jumping before data loads */
+}
+
+.weather-card {
+    background-color: #eef7ff;
+    border: 1px solid #bce0ff;
+    border-radius: 6px;
+    padding: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.weather-card h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0056b3;
+}
