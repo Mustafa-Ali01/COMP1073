@@ -85,7 +85,7 @@ li.completed span {
     color: #7f8c8d;
 }
 
-/* Take it further: Checked items fade to green */
+/* Extra: Checked items fade to green */
 li.completed {
     background-color: #d5f5e3;
 }
@@ -105,7 +105,7 @@ li.completed {
     background-color: #c0392b;
 }
 
-/* Take it further: Deleted items fade to red before vanishing */
+/* Extra: Deleted items fade to red before vanishing */
 li.fade-out {
     background-color: #fadbd8;
     opacity: 0;
