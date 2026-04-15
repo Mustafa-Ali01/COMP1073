@@ -17,7 +17,7 @@ fetchBtn.addEventListener('click', async function() {
     const lon = geoData[0].lon;
     const name = geoData[0].name;
 
-    // 2. Get Weather
+    // Get Weather
     const weatherResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
     const weatherData = await weatherResponse.json();
 
